@@ -1,0 +1,13 @@
+*.o
+*.ali
+*.exe
+*.xml
+b__*
+*.db*
+*.cgpr
+*.bexch
+*.npp
+*.stderr
+*.stdout
+*.diff
+*.cswi
