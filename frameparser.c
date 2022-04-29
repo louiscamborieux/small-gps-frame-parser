@@ -19,7 +19,11 @@ int checkframe(char* s){
   }
 }
 
-void extract_fields (char* s, char fields[3][MAX_FIELD_SIZE]){
+int extract_fields (char* s, char fields[3][MAX_FIELD_SIZE]){
+    if (checkframe (s) !=0) {
+      fields = NULL;
+      return -1;
+    }
     //Extraction de l'heure
     s = strchr(s,',')+1;
     strncpy(fields[0],s,6);
@@ -33,24 +37,29 @@ void extract_fields (char* s, char fields[3][MAX_FIELD_SIZE]){
     *fields[2] = '\0'; strncat(fields[2],s,10);
     s = strchr(s,',')+1;
     strncat(fields[2],s,1);
+    return 0;
 }
 
-void format_time(char s[6], char* r) {
+int format_time(char s[6], char* r) {
+  r[0] = '\0'; 
   strncat(r,s,2);
   strcat(r,"h");
   strncat(r,s+2,2);
   strcat(r,"m");
   strncat(r,s+4,2);
   strcat(r,"s");
+  return 0;
 }
 
-void convert_coord(char s[12],char r[15], int offset) {
+
+int convert_coord(char s[12],char r[15], int offset) {
   int i = 0;
   char  seconde[6];
   r[0] = '\0';
   while (i <(2+offset) && s[i] =='0'){
     i++;
   }
+  //prend en compte les trames à 0 degré
   if (i <2+offset){
     strncat(r,s+i,2+offset-i);
     }
@@ -64,6 +73,7 @@ void convert_coord(char s[12],char r[15], int offset) {
   strcat(r,seconde);
   strcat(r,"\"");
   strcat(r,s+9+offset);
+  return 0;
   
 }
 
