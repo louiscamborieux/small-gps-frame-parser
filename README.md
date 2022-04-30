@@ -23,4 +23,5 @@ Ce projet sera divisé en 3 programmes :
 *Contrainte imposée : la trame GPS doit contenir au moins 15 champs.*
 
 ##  Description
+*Note : Description plus détaillée des différents programmes*
 
