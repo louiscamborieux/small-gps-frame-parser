@@ -20,7 +20,9 @@ Au cours de ce mini projet nous allons développer une application en C qui perm
 Ce projet sera divisé en 3 sous programmes :
 
  - affichage.c : c'est le main, il permet d'afficher les coordonnées ainsi que l'heure dans les formats imposés.
+
  - frameparser.c : permet de vérifier la trame (si elle est du bon format), d'extraire les informations qui nous intéressent et de convertir ces données.
+ 
  - frameparser.h : contient les entêtes des fonctions de frameparser.c.
  
 *Contrainte imposée : la trame GPS doit contenir au moins 15 champs.*
