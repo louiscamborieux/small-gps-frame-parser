@@ -23,13 +23,13 @@ Ce projet sera divisé en 3 sous programmes :
  
  - frameparser.h : contient les entêtes des fonctions de frameparser.c.
 
- - in.txt : Fichier texte source du programme pour les trames en entrée.
+ - in.txt : Fichier texte source du programme pour les trames en entrée. Les trames sont lues ligne par ligne par le programme.
  
 *Contrainte imposée : la trame GPS doit contenir au moins 15 champs.*
 
 ## Fonctionnement 
     1. Avant de lancer le programme, L'utilisateur renseigne la ou les trames qu'il souhaite étudier dans un fichier texte *in.txt*, 
-     celui-ci doit se trouver dans le même   répertoire que l'executable
+     celui-ci doit se trouver dans le même  répertoire que l'executable
     2. Un menu apparait, l'utilisateur peut alors choisir quelle trame traiter, et peut naviguer de page en page avec la touche p et s
     3. La latitude, longitude et l'heure extraite de la trame s'affichent
 
