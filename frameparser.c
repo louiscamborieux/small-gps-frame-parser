@@ -92,9 +92,9 @@ int convert_coord(char s[12],char r[15], int offset) {
     strcat(r,"0");
   }
   strcat(r,"°");
-  strncat(r,s+2,2);
+  strncat(r,s+2+offset,2);
   strcat(r,"'");
-  sprintf(seconde,"%g",strtof(s+4,NULL)*60);
+  sprintf(seconde,"%g",strtof(s+4+offset,NULL)*60);
   strcat(r,seconde);
   strcat(r,"\"");
   strcat(r,s+9+offset);
