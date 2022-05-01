@@ -32,7 +32,9 @@ Ce projet sera divisé en 3 sous programmes :
 Le sous-programmes affiche.c contient 3 fonctions :
 
 - La fonction affichercoord prend en paramètres d'entrées une chaîne dynamique s de caractères et coord de type caractère, retourne un entier. Cette fonction permet d'afficher les coordonnées (latitude et longitude). On peut choisir soit d'afficher uniquement la longitude ou la latitude soit les deux.
+
 - La fonction afficherheure prend en paramètre d'entrée une chaîne dynamique s et retourne un entier. 
+
 - La fonction main retourne un entier. Elle affiche toutes les informations sous le bon format.
 
 Le sous-programmes affiche.c contient 4 fonctions :
